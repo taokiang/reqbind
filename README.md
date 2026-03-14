@@ -15,10 +15,10 @@
 
 ```bash
 # 核心库（含 net/http 适配器）
-go get github.com/troytao/reqbind
+go get github.com/taokiang/reqbind
 
 # gin 适配器（独立模块，不使用 gin 则无需安装）
-go get github.com/troytao/reqbind/adapters/gin
+go get github.com/taokiang/reqbind/adapters/gin
 ```
 
 > **环境要求**：Go 1.22+（`net/http` 适配器的路径参数依赖 Go 1.22 引入的 `r.PathValue()`）
@@ -42,7 +42,7 @@ type CreateUserReq struct {
 ### 标准库 `net/http`
 
 ```go
-import stdbind "github.com/troytao/reqbind/std"
+import stdbind "github.com/taokiang/reqbind/std"
 
 mux := http.NewServeMux()
 mux.HandleFunc("POST /orgs/{org_id}/users", func(w http.ResponseWriter, r *http.Request) {
@@ -61,7 +61,7 @@ mux.HandleFunc("POST /orgs/{org_id}/users", func(w http.ResponseWriter, r *http.
 ### Gin
 
 ```go
-import ginbind "github.com/troytao/reqbind/adapters/gin"
+import ginbind "github.com/taokiang/reqbind/adapters/gin"
 
 r := gin.Default()
 r.POST("/orgs/:org_id/users", func(c *gin.Context) {
@@ -222,7 +222,7 @@ if req.Filter == nil {
 只需实现 `bind.RequestContext` 接口，即可接入任意框架：
 
 ```go
-import "github.com/troytao/reqbind"
+import "github.com/taokiang/reqbind"
 
 type EchoAdapter struct {
     c echo.Context
@@ -276,7 +276,7 @@ if err != nil {
 
 ```
 reqbind/
-├── go.mod                  # module github.com/troytao/reqbind（零外部依赖）
+├── go.mod                  # module github.com/taokiang/reqbind（零外部依赖）
 ├── go.work                 # Go workspace，关联核心模块与适配器
 ├── bind.go                 # RequestContext 接口 + Decode[T] 公开 API
 ├── field.go                # struct tag 解析 + sync.Map 字段元数据缓存

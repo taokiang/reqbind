@@ -10,8 +10,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/troytao/reqbind"
-	stdbind "github.com/troytao/reqbind/std"
+	"github.com/taokiang/reqbind"
+	stdbind "github.com/taokiang/reqbind/std"
 )
 
 // ── 测试辅助：mock RequestContext ─────────────────────────────────────────────

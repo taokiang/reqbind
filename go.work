@@ -5,4 +5,4 @@ use (
 	./adapters/gin
 )
 
-replace github.com/troytao/reqbind => .
+replace github.com/taokiang/reqbind => .

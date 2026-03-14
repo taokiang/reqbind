@@ -1,3 +1,3 @@
-module github.com/troytao/reqbind
+module github.com/taokiang/reqbind
 
 go 1.22

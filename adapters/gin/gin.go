@@ -13,7 +13,7 @@ import (
 	"io"
 
 	"github.com/gin-gonic/gin"
-	"github.com/troytao/reqbind"
+	"github.com/taokiang/reqbind"
 )
 
 // Adapter 将 *gin.Context 包装为 bind.RequestContext。

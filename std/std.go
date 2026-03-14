@@ -15,7 +15,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/troytao/reqbind"
+	"github.com/taokiang/reqbind"
 )
 
 // Adapter 将 *http.Request 包装为 bind.RequestContext。
