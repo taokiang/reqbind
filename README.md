@@ -1,5 +1,9 @@
 # reqbind
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/taokiang/reqbind.svg)](https://pkg.go.dev/github.com/taokiang/reqbind)
+[![Go Version](https://img.shields.io/badge/Go-1.22+-00ADD8?logo=go)](https://go.dev)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 框架无关的 Go HTTP 请求绑定库。通过结构体标签，一次调用即可从 URL 路径参数、请求头、查询参数、请求体等多个来源同步绑定数据。
 
 ## 特性
